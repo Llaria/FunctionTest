@@ -3,7 +3,7 @@ import android.app.Activity;
 import android.os.Handler;
 import android.os.Looper;
 import android.widget.Toast;
-import static sun.sundy.functiontest.App.application;
+import static sun.sundy.functiontest.App.app;
 
 /**
  * 吐司工具类
@@ -31,7 +31,7 @@ public class ToastUtils {
 	 * @param resId
 	 */
 	public static void showToast(int resId) {
-		showToast(application.getString(resId));
+		showToast(app.getString(resId));
 	}
 
 	/**
@@ -54,7 +54,7 @@ public class ToastUtils {
 	 */
 	public static void showToast(String content, int duration) {
 		if (mToast == null) {
-			mToast = Toast.makeText(application, content, Toast.LENGTH_SHORT);
+			mToast = Toast.makeText(app, content, Toast.LENGTH_SHORT);
 		} else {
 			mToast.setText(content);
 		}
@@ -66,14 +66,14 @@ public class ToastUtils {
 	 * 显示消息不会被覆盖的toast
 	 */
 	public static void showLazzToast(int resId) {
-		showLazzToast(application.getString(resId));
+		showLazzToast(app.getString(resId));
 	}
 
 	/**
 	 * 显示消息不会被覆盖的toast
 	 */
 	public static void showLazzToast(String content) {
-		Toast.makeText(application, content, Toast.LENGTH_SHORT).show();
+		Toast.makeText(app, content, Toast.LENGTH_SHORT).show();
 	}
 
    
